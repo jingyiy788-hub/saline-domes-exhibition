@@ -1,0 +1,51 @@
+/* Chapter 03 continues from the relations plate into the six-force archive. */
+#salt-relations {
+  padding-bottom: 0;
+}
+
+#salt-relations .salt-summary {
+  max-width: 690px;
+}
+
+#salt-archive {
+  margin-top: 0;
+  border-top: 0 !important;
+  scroll-margin-top: 42px;
+}
+
+#salt-archive .archive-unfold-inner {
+  min-height: calc(100vh - 42px);
+}
+
+#salt-archive .archive-unfold-kicker {
+  color: #77756f;
+}
+
+.relations-archive-bridge {
+  display: grid;
+  grid-template-columns: minmax(90px, .22fr) minmax(0, 1fr);
+  gap: 24px;
+  width: min(1040px, calc(100% - 44px));
+  margin: clamp(36px, 6vw, 78px) auto 0;
+  padding: 22px 0 clamp(30px, 5vw, 64px);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.relations-archive-bridge span {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+
+.relations-archive-bridge p {
+  max-width: 620px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+@media (max-width: 760px) {
+  .relations-archive-bridge { grid-template-columns: 1fr; }
+}
