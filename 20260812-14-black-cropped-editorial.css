@@ -1,0 +1,74 @@
+:root {
+  --paper: #000;
+}
+
+html,
+body,
+main,
+.view,
+.project-view,
+.project-overview,
+.salt-story,
+.salt-scene,
+.salt-scene--familiar,
+.salt-closing,
+.archive-unfold,
+.archive-unfold-inner,
+#salt-breath.breath-finale,
+.breath-finale-inner {
+  background-color: #000 !important;
+}
+
+.site-header,
+.salt-story-nav {
+  background: rgba(0, 0, 0, .94) !important;
+}
+
+.salt-media.editorial-crop {
+  overflow: visible;
+}
+
+.salt-media.editorial-crop > img {
+  height: auto;
+  aspect-ratio: 2.05 / 1;
+  object-fit: cover;
+  object-position: center 58%;
+}
+
+.salt-media.editorial-crop--landscape > img {
+  aspect-ratio: 2.2 / 1;
+  object-position: center 55%;
+}
+
+.salt-media.editorial-crop figcaption {
+  width: min(720px, 100%);
+  margin-top: 0;
+  padding: 18px 0 0;
+  border-top: 1px solid rgba(242, 241, 236, .16);
+  background: #000;
+}
+
+.salt-media.editorial-crop figcaption span {
+  color: #77756f;
+  font: 10px/1.25 Consolas, monospace;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.salt-media.editorial-crop figcaption strong {
+  max-width: 22em;
+  color: #f2f1ec;
+  font: 400 clamp(18px, 2vw, 27px)/1.16 Georgia, serif;
+  letter-spacing: -.02em;
+}
+
+.breath-horizon-mask {
+  background: linear-gradient(to bottom, #000 0 47%, transparent 47% 53%, #000 53% 100%);
+}
+
+@media (max-width: 760px) {
+  .salt-media.editorial-crop > img,
+  .salt-media.editorial-crop--landscape > img {
+    aspect-ratio: 16 / 10;
+  }
+}

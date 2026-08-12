@@ -1,0 +1,125 @@
+/* Version 16: chapters read as compositions, not PDF pages. */
+.salt-media-list {
+  gap: clamp(34px, 5vw, 70px);
+}
+
+.salt-media {
+  position: relative;
+}
+
+.salt-media figcaption,
+.salt-media.editorial-crop figcaption {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  z-index: 3;
+  display: block;
+  width: auto;
+  max-width: min(46ch, calc(100% - 24px));
+  margin: 0;
+  padding: 5px 7px;
+  border: 0;
+  background: rgba(0, 0, 0, .78);
+  text-align: right;
+  pointer-events: none;
+}
+
+.salt-media figcaption > span {
+  display: none !important;
+}
+
+.salt-media figcaption strong,
+.salt-media.editorial-crop figcaption strong {
+  display: block;
+  color: rgba(242, 241, 236, .82);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: .01em;
+}
+
+.salt-summary {
+  max-width: 640px;
+  font-size: 12px !important;
+  line-height: 1.55;
+}
+
+.salt-scene-head {
+  margin-bottom: clamp(34px, 5vw, 58px);
+}
+
+/* Crop presentation headings out of the early mapping boards. */
+#salt-origin .salt-media > img {
+  aspect-ratio: 2.08 / 1;
+  object-fit: cover;
+  object-position: center 72%;
+}
+
+#salt-origin .salt-media:nth-child(3) > img {
+  object-position: center 76%;
+}
+
+/* Relations becomes one decisive plate leading directly to the archive. */
+#salt-relations {
+  padding-bottom: clamp(38px, 5vw, 70px);
+  border-bottom: 0;
+}
+
+#salt-relations .salt-media-list {
+  gap: 0;
+}
+
+#salt-relations .salt-media {
+  width: min(1040px, calc(100% - 44px));
+  margin: 0 auto;
+}
+
+#salt-relations .salt-media > img {
+  transform-origin: center bottom;
+  will-change: transform, opacity, filter;
+}
+
+#salt-archive {
+  border-top: 0;
+}
+
+/* Within each chapter, media reads as one continuous field. */
+#salt-process .salt-media-list,
+#salt-machine .salt-media-list,
+#salt-host .salt-media-list,
+#salt-inhabiting .salt-media-list {
+  width: min(1040px, calc(100% - 44px));
+  margin: 0 auto;
+}
+
+#salt-process .salt-media,
+#salt-machine .salt-media,
+#salt-host .salt-media,
+#salt-inhabiting .salt-media {
+  width: 100%;
+  margin: 0;
+}
+
+.salt-growth-video figcaption {
+  padding: 5px 7px;
+}
+
+@media (max-width: 760px) {
+  .salt-media figcaption,
+  .salt-media.editorial-crop figcaption {
+    right: 6px;
+    bottom: 6px;
+    max-width: calc(100% - 12px);
+  }
+
+  #salt-origin .salt-media > img {
+    aspect-ratio: 16 / 10;
+    object-position: center 70%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #salt-relations .salt-media > img {
+    will-change: auto;
+  }
+}

@@ -1,0 +1,66 @@
+.familiar-image-plan {
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  gap: 2px;
+  background: #111;
+}
+
+.familiar-placeholder {
+  position: relative;
+  display: flex;
+  min-height: min(72vh, 780px);
+  margin: 0;
+  padding: clamp(28px, 4vw, 58px);
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background: #f1f0eb;
+  color: #161616;
+}
+
+.familiar-placeholder::after {
+  content: "IMAGE TO ADD";
+  position: absolute;
+  right: 22px;
+  bottom: 18px;
+  color: rgba(0, 0, 0, .14);
+  font: 700 clamp(36px, 6vw, 94px)/.85 Georgia, serif;
+  letter-spacing: -.05em;
+}
+
+.familiar-placeholder small {
+  position: relative;
+  z-index: 1;
+  font: 700 10px/1.2 Consolas, monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.familiar-placeholder p {
+  position: relative;
+  z-index: 1;
+  max-width: 18em;
+  margin: auto 0;
+  font: 400 clamp(24px, 3vw, 46px)/1.03 Georgia, serif;
+  letter-spacing: -.035em;
+}
+
+.familiar-placeholder figcaption {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 6px;
+  max-width: 40em;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.familiar-placeholder figcaption span {
+  font: 10px/1.2 Consolas, monospace;
+  text-transform: uppercase;
+}
+
+@media (max-width: 760px) {
+  .familiar-image-plan { grid-template-columns: 1fr; }
+  .familiar-placeholder { min-height: 58vh; }
+}

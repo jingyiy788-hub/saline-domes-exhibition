@@ -1,0 +1,141 @@
+#salt-breath.breath-finale {
+  position: relative;
+  min-height: 100vh;
+  padding: 0;
+  overflow: hidden;
+  background: #080908;
+  color: #f2f1ec;
+}
+
+.breath-finale-inner {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 64px);
+  min-height: 620px;
+  overflow: hidden;
+  background: #080908;
+}
+
+.breath-finale-image,
+.breath-finale-fog,
+.breath-finale-shade,
+.breath-horizon-mask {
+  position: absolute;
+  inset: 0;
+}
+
+.breath-finale-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 52%;
+  filter: saturate(.5) contrast(.92) brightness(.72);
+  transform: scale(1.055);
+  will-change: transform, filter;
+}
+
+.breath-finale-fog {
+  z-index: 1;
+  background:
+    radial-gradient(ellipse at 55% 55%, rgba(236, 239, 231, .55), transparent 50%),
+    linear-gradient(to bottom, rgba(225, 230, 222, .34), rgba(229, 232, 226, .1) 48%, rgba(223, 227, 221, .3));
+  mix-blend-mode: screen;
+  opacity: .12;
+  filter: blur(26px);
+  transform: scale(1.12);
+  will-change: opacity, transform;
+  pointer-events: none;
+}
+
+.breath-finale-shade {
+  z-index: 2;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .2), transparent 32%, rgba(0, 0, 0, .52));
+  pointer-events: none;
+}
+
+.breath-copy {
+  position: absolute;
+  z-index: 4;
+  left: clamp(24px, 6vw, 92px);
+  bottom: clamp(42px, 9vh, 104px);
+  max-width: 690px;
+}
+
+.breath-copy small {
+  display: block;
+  margin-bottom: 20px;
+  color: rgba(242, 241, 236, .65);
+  font: 700 10px/1.2 Consolas, monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.breath-copy h3 {
+  max-width: 10em;
+  margin: 0 0 22px;
+  font: 400 clamp(42px, 6vw, 88px)/.92 Georgia, serif;
+  letter-spacing: -.045em;
+}
+
+.breath-copy p {
+  max-width: 540px;
+  margin: 0;
+  color: rgba(242, 241, 236, .76);
+  font-size: clamp(15px, 1.35vw, 20px);
+  line-height: 1.5;
+}
+
+.breath-copy-line,
+.breath-copy-final {
+  position: absolute;
+  z-index: 5;
+  inset: 50% auto auto 50%;
+  width: min(820px, calc(100% - 44px));
+  margin: 0;
+  color: #f2f1ec;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.breath-copy-line {
+  font: 400 clamp(27px, 3.2vw, 48px)/1.08 Georgia, serif;
+}
+
+.breath-copy-final {
+  font: 700 11px/1.3 Consolas, monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.breath-horizon-mask {
+  z-index: 3;
+  background: linear-gradient(to bottom, #080908 0 47%, transparent 47% 53%, #080908 53% 100%);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.breath-scroll-note {
+  position: absolute;
+  z-index: 6;
+  right: 24px;
+  bottom: 20px;
+  color: rgba(242, 241, 236, .48);
+  font: 9px/1.2 Consolas, monospace;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 760px) {
+  .breath-finale-inner { min-height: 560px; }
+  .breath-copy { left: 22px; right: 22px; }
+  .breath-copy h3 { font-size: clamp(38px, 12vw, 58px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .breath-finale-image,
+  .breath-finale-fog { will-change: auto; }
+  .breath-scroll-note { display: none; }
+}

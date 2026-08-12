@@ -1,0 +1,74 @@
+/* Version 12 also restores the version 11 scale and neutral dark layout. */
+.salt-scene { padding: clamp(64px, 8vw, 112px) 0; }
+.salt-scene-head {
+  grid-template-columns: minmax(90px, .22fr) minmax(0, 1fr);
+  gap: 24px;
+  width: min(1040px, calc(100% - 44px));
+  margin-bottom: clamp(42px, 6vw, 76px);
+}
+.salt-scene-head h3 {
+  max-width: 900px;
+  margin-bottom: 17px;
+  font-size: clamp(30px, 3.7vw, 54px);
+  line-height: .98;
+}
+.salt-question,
+.salt-scene--familiar .salt-question {
+  max-width: 760px;
+  margin-bottom: 17px;
+  color: #a9c6bb;
+  font-size: clamp(17px, 1.75vw, 25px);
+  line-height: 1.25;
+}
+.salt-summary { max-width: 680px; font-size: 15px; line-height: 1.55; }
+.archive-unfold-kicker { color: #aaa79e; }
+.archive-unfold-copy h3 { font-size: clamp(43px, 4.4vw, 70px); }
+.archive-unfold-copy p { font-size: clamp(14px, 1.1vw, 18px); }
+.familiar-image-plan {
+  gap: clamp(34px, 5vw, 72px);
+  width: min(1040px, calc(100% - 44px));
+  margin: 0 auto;
+  background: transparent;
+}
+.familiar-placeholder {
+  display: block;
+  min-height: 0;
+  padding: 0;
+  overflow: visible;
+  background: transparent;
+  color: #aaa79e;
+}
+.familiar-placeholder::after { display: none; }
+.familiar-white-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 15px;
+  background: #fff;
+}
+.familiar-placeholder figcaption { max-width: 34em; color: #aaa79e; font-size: 11px; }
+.familiar-placeholder figcaption span { color: #f2f1ec; }
+
+.salt-growth-video {
+  width: min(1040px, calc(100% - 44px));
+}
+
+.salt-growth-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #000;
+}
+
+.salt-growth-video figcaption {
+  padding-top: 12px;
+}
+
+.salt-growth-video figcaption strong {
+  font-weight: 400;
+}
+
+@media (max-width: 760px) {
+  .salt-scene-head { grid-template-columns: 1fr; }
+  .salt-scene-head h3 { font-size: clamp(28px, 9vw, 43px); }
+  .familiar-image-plan { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,165 @@
+/* One header system: primary links + collapsible chapter index. */
+.site-header {
+  transition: transform .35s ease, background-color .35s ease;
+}
+
+.salt-story-nav {
+  top: 64px;
+  padding: 10px 22px;
+  max-height: 66px;
+  transition: max-height .35s ease, padding .35s ease, transform .35s ease, opacity .3s ease;
+}
+
+body.chapter-nav-collapsed .site-header {
+  transform: translateY(-64px);
+}
+
+body.chapter-nav-collapsed .salt-story-nav {
+  top: 0;
+  max-height: 42px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+body.chapter-nav-collapsed .salt-story-nav a {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.chapter-nav-toggle {
+  position: sticky;
+  top: 7px;
+  z-index: 15;
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #000;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.chapter-nav-toggle::before {
+  content: "−";
+}
+
+body.chapter-nav-collapsed .chapter-nav-toggle::before {
+  content: "+";
+}
+
+/* Restore the relations plate: no hand-off fade. */
+#salt-relations .salt-media > img {
+  transform: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+}
+
+/* Process film becomes image + editorial explanation. */
+.salt-growth-video {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(240px, .65fr);
+  gap: clamp(26px, 4vw, 56px);
+  align-items: center;
+}
+
+.salt-growth-video video {
+  grid-column: 1;
+}
+
+.salt-growth-video figcaption {
+  position: static;
+  grid-column: 2;
+  display: block;
+  max-width: 30ch;
+  padding: 0;
+  background: transparent;
+  text-align: left;
+}
+
+.salt-growth-video figcaption strong {
+  font-size: clamp(20px, 2.2vw, 30px);
+  line-height: 1.1;
+}
+
+.salt-growth-video figcaption::after {
+  content: "A time-compressed observation of crystals nucleating at the edge, dispersing across the liquid surface and accumulating into a visible field.";
+  display: block;
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* Editable missing-image slots used across chapters. */
+.chapter-placeholder-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(18px, 3vw, 38px);
+  width: min(1040px, calc(100% - 44px));
+  margin: clamp(42px, 7vw, 90px) auto 0;
+}
+
+.chapter-placeholder {
+  grid-column: span 5;
+  margin: 0;
+  color: var(--muted);
+}
+
+.chapter-placeholder:nth-child(even) {
+  grid-column: 8 / span 5;
+  margin-top: clamp(50px, 8vw, 110px);
+}
+
+.chapter-placeholder-image {
+  width: 100%;
+  aspect-ratio: var(--placeholder-ratio, 4 / 5);
+  background: #fff;
+}
+
+.chapter-placeholder figcaption {
+  margin-top: 10px;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.chapter-placeholder figcaption strong {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--ink);
+  font-size: 10px;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.chapter-placeholder--wide {
+  grid-column: span 8;
+}
+
+.chapter-placeholder--wide .chapter-placeholder-image {
+  --placeholder-ratio: 16 / 9;
+}
+
+.chapter-placeholder--square .chapter-placeholder-image {
+  --placeholder-ratio: 1 / 1;
+}
+
+.chapter-placeholder--portrait .chapter-placeholder-image {
+  --placeholder-ratio: 3 / 5;
+}
+
+@media (max-width: 760px) {
+  .salt-growth-video { grid-template-columns: 1fr; }
+  .salt-growth-video video,
+  .salt-growth-video figcaption { grid-column: 1; }
+  .chapter-placeholder,
+  .chapter-placeholder:nth-child(even),
+  .chapter-placeholder--wide { grid-column: 1 / -1; margin-top: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header,
+  .salt-story-nav { transition: none; }
+}

@@ -3,154 +3,42 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Saline Domes | Ecology Ten Block Layout</title>
-    <meta
-      name="description"
-      content="An online exhibition index featuring The Saline Domes, Urban Design MArch RC16 Vanishing City."
-    />
+    <title>The Saline Domes | Machine Growth Simulator</title>
+    <meta name="description" content="A nine-part narrative tracing salt from familiar material to territorial metabolism." />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./20260806-27-ecology-ten-block-layout.css" />
+    <link rel="stylesheet" href="./20260811-04-salt-narrative.css" />
+    <link rel="stylesheet" href="./20260812-07-experiments-narrative.css" />
+    <link rel="stylesheet" href="./20260812-09-archive-unfold.css" />
+    <link rel="stylesheet" href="./20260812-10-familiar-placeholder.css" />
+    <link rel="stylesheet" href="./20260812-12-crystal-growth-video.css" />
+    <link rel="stylesheet" href="./20260812-13-breathing-finale.css" />
+    <link rel="stylesheet" href="./20260812-14-black-cropped-editorial.css" />
+    <link rel="stylesheet" href="./20260812-15-unified-type-system.css" />
+    <link rel="stylesheet" href="./20260812-16-chapter-narrative-flow.css" />
+    <link rel="stylesheet" href="./20260812-17-collapsible-chapter-editor.css" />
+    <link rel="stylesheet" href="./20260812-18-machine-growth-simulator.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#home" aria-label="Online Exhibition home">
-        <span>Online Exhibition</span>
-        <span>2026</span>
-      </a>
-      <nav class="main-nav" aria-label="Primary navigation">
-        <a href="#projects">Projects</a>
-        <a href="#students">Students</a>
-        <a href="#about">About</a>
-      </nav>
-    </header>
-
+    <header class="site-header"><a class="brand" href="#home" aria-label="Online Exhibition home"><span>Online Exhibition</span><span>2026</span></a><nav class="main-nav" aria-label="Primary navigation"><a href="#project/the-saline-domes">Project</a><a href="#students">Students</a><a href="#about">About</a></nav></header>
     <main>
-      <section id="home" class="hero view active" aria-labelledby="hero-title">
-        <canvas
-          id="dither-canvas"
-          class="dither-canvas"
-          aria-hidden="true"
-          data-src="./assets/term3-finalpre/page-46.jpg"
-        ></canvas>
-        <img
-          class="hero-image"
-          src="./assets/term3-finalpre/page-46.jpg"
-          alt="Atmospheric final render from The Saline Domes project"
-        />
-        <div class="dither-controls" aria-label="Dithering controls">
-          <label>
-            <span>Dither</span>
-            <input id="dither-progress" type="range" min="0" max="1" step="0.01" value="0.62" />
-          </label>
-          <label>
-            <span>Depth</span>
-            <input id="dither-depth" type="range" min="0" max="1" step="0.01" value="0.48" />
-          </label>
-        </div>
-        <div class="hero-copy">
-          <p>Urban Design MArch RC16 Vanishing City</p>
-          <h1 id="hero-title">THE SALINE DOMES</h1>
-          <a class="enter-link" href="#project/the-saline-domes">Enter Project</a>
-        </div>
-      </section>
-
-      <section id="projects" class="view index-view" aria-labelledby="projects-title">
-        <div class="index-top">
-          <div>
-            <p class="section-kicker">Index of all works</p>
-            <h2 id="projects-title">Projects</h2>
-          </div>
-          <label class="search">
-            <span>Search</span>
-            <input id="project-search" type="search" placeholder="title, student, keyword" />
-          </label>
-        </div>
-
-        <div class="filters" aria-label="Project filters">
-          <button class="filter active" type="button" data-filter="all">All</button>
-          <button class="filter" type="button" data-filter="Urban Design MArch">Programme</button>
-          <button class="filter" type="button" data-filter="RC16">Unit</button>
-          <button class="filter" type="button" data-filter="2026">Year</button>
-        </div>
-
-        <div id="project-grid" class="project-grid" aria-live="polite"></div>
-      </section>
-
-      <section id="students" class="view directory-view" aria-labelledby="students-title">
-        <p class="section-kicker">Directory</p>
-        <h2 id="students-title">Students</h2>
-        <div class="student-list">
-          <a href="#project/the-saline-domes">Jingyi Yang</a>
-          <a href="#project/the-saline-domes">Keqi Zhao</a>
-          <a href="#project/the-saline-domes">Shenhong Lin</a>
-          <a href="#project/the-saline-domes">Zijing Liang</a>
-        </div>
-      </section>
-
-      <section id="about" class="view about-view" aria-labelledby="about-title">
-        <p class="section-kicker">About</p>
-        <h2 id="about-title">A searchable online exhibition prototype</h2>
-        <p>
-          This site translates a presentation PDF into a web exhibition format: a public
-          index, structured project metadata, and a full visual sequence for detailed browsing.
-        </p>
-      </section>
-
+      <section id="home" class="hero view active" aria-labelledby="hero-title"><canvas id="dither-canvas" class="dither-canvas" aria-hidden="true" data-src="./assets/term3-finalpre/page-46.jpg"></canvas><img class="hero-image" src="./assets/term3-finalpre/page-46.jpg" alt="Atmospheric final render from The Saline Domes project" /><div class="dither-controls"><label><span>Dither</span><input id="dither-progress" type="range" min="0" max="1" step=".01" value=".62"></label><label><span>Depth</span><input id="dither-depth" type="range" min="0" max="1" step=".01" value=".48"></label></div><div class="hero-copy"><p>Urban Design MArch RC16 Vanishing City</p><h1 id="hero-title">THE SALINE DOMES</h1><a class="enter-link" href="#project/the-saline-domes">Enter Project</a></div></section>
+      <section id="projects" class="view index-view"><div class="index-top"><div><p class="section-kicker">Index of all works</p><h2>Projects</h2></div><label class="search"><span>Search</span><input id="project-search" type="search" placeholder="title, student, keyword"></label></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="Urban Design MArch">Programme</button><button class="filter" data-filter="RC16">Unit</button><button class="filter" data-filter="2026">Year</button></div><div id="project-grid" class="project-grid"></div></section>
+      <section id="students" class="view directory-view"><p class="section-kicker">Directory</p><h2>Students</h2><div class="student-list"><a href="#project/the-saline-domes">Jingyi Yang</a><a href="#project/the-saline-domes">Keqi Zhao</a><a href="#project/the-saline-domes">Shenhong Lin</a><a href="#project/the-saline-domes">Zijing Liang</a></div></section>
+      <section id="about" class="view about-view"><p class="section-kicker">About</p><h2>The Saline Domes</h2><p>An online exhibition about salt as environmental archive, growing material and territorial metabolism.</p></section>
       <section id="project-detail" class="view project-view" aria-labelledby="project-title">
-        <section id="project-overview" class="project-overview">
-          <img
-            class="linework-background"
-            src="./assets/0621a-linework/0621a-user-white.png"
-            alt=""
-            aria-hidden="true"
-          />
-          <canvas id="linework-canvas" class="linework-canvas" aria-hidden="true"></canvas>
-          <a class="back-link" href="#projects">Back to index</a>
-          <div class="overview-grid">
-            <div class="overview-title">
-              <p class="section-kicker">Project</p>
-              <h2 id="project-title">SALINE DOMES</h2>
-            </div>
-            <dl class="overview-meta">
-              <div><dt>Programme</dt><dd>Urban Design MArch</dd></div>
-              <div><dt>Unit</dt><dd>RC16 Vanishing City</dd></div>
-              <div><dt>Students</dt><dd>Jingyi Yang, Keqi Zhao, Shenhong Lin, Zijing Liang</dd></div>
-              <div><dt>Tutors</dt><dd>Claudia Pasquero, Filippo Nassetti</dd></div>
-              <div><dt>Year</dt><dd>2026</dd></div>
-            </dl>
-          </div>
-          <section class="abstract">
-            <p class="section-kicker">Abstract</p>
-            <p>
-              Saline Dome investigates how architecture can emerge through the collaboration
-              of salt crystallisation, microbial mineralisation, and computational form-finding.
-              Located in a degraded inland salt-lake landscape in China, the project treats salt
-              as an active non-human medium that grows, collapses, repairs, and records
-              environmental change.
-            </p>
-          </section>
-        </section>
-
-        <section id="chapter-selector" class="chapter-selector" aria-label="Project chapters">
-          <div id="chapter-cards" class="chapter-cards"></div>
-        </section>
-
-        <section id="chapter-reader" class="chapter-reader" hidden>
-          <div class="sidebar-hover-zone" aria-hidden="true"></div>
-          <aside id="reader-sidebar" class="reader-sidebar">
-            <a class="back-link" href="#project/the-saline-domes">All chapters</a>
-            <p class="section-kicker">Chapters</p>
-            <nav id="chapter-side-nav" class="chapter-side-nav" aria-label="Project chapters"></nav>
-          </aside>
-          <article class="reader-content">
-            <header id="reader-heading" class="reader-heading"></header>
-            <div id="project-gallery" class="gallery waterfall-gallery"></div>
-          </article>
-        </section>
+        <section id="project-overview" class="project-overview"><img class="linework-background" src="./assets/0621a-linework/0621a-user-white.png" alt="" aria-hidden="true"><canvas id="linework-canvas" class="linework-canvas" aria-hidden="true"></canvas><a class="back-link" href="#home">Back to home</a><div class="overview-grid"><div class="overview-title"><p class="section-kicker">Project</p><h2 id="project-title">SALINE DOMES</h2></div><dl class="overview-meta"><div><dt>Programme</dt><dd>Urban Design MArch</dd></div><div><dt>Unit</dt><dd>RC16 Vanishing City</dd></div><div><dt>Students</dt><dd>Jingyi Yang, Keqi Zhao, Shenhong Lin, Zijing Liang</dd></div><div><dt>Tutors</dt><dd>Claudia Pasquero, Filippo Nassetti</dd></div><div><dt>Year</dt><dd>2026</dd></div></dl></div><section class="abstract"><p class="section-kicker">Abstract</p><p>Saline Dome investigates how architecture can emerge through the collaboration of salt crystallisation, microbial mineralisation, and computational form-finding. Located in a degraded inland salt-lake landscape in China, the project treats salt as an active non-human medium that grows, collapses, repairs, and records environmental change.</p></section></section>
+        <section id="salt-story" class="salt-story"><nav class="salt-story-nav" aria-label="Salt narrative"><a href="#salt-origin">Origin</a><a href="#salt-archive">Archive</a><a href="#salt-process">Process</a><a href="#salt-host">Host</a><a href="#salt-inhabiting">Inhabiting</a><a href="#salt-breath">Breath</a></nav><div id="salt-story-sections"></div><footer class="salt-closing"><blockquote>Salt is not used to construct a finished building.</blockquote><p>Architecture provides a host through which salt can record, grow, collapse and regenerate.</p></footer></section>
+        <div id="project-gallery" hidden></div>
       </section>
     </main>
-
-    <script src="./app.js"></script>
-    <script src="./20260806-27-ecology-ten-block-layout.js"></script>
+    <script src="./app.js"></script><script src="./20260811-04-salt-narrative.js"></script><script src="./20260812-07-experiments-narrative.js"></script><script src="./20260812-08-restructured-story.js"></script><script src="./vendor/gsap/gsap.min.js"></script><script src="./vendor/gsap/ScrollTrigger.min.js"></script><script src="./20260812-09-archive-unfold.js"></script><script src="./20260812-10-familiar-placeholder.js"></script><script src="./20260812-12-crystal-growth-video.js"></script><script src="./20260812-13-breathing-finale.js"></script><script src="./20260812-14-black-cropped-editorial.js"></script><script src="./20260812-16-chapter-narrative-flow.js"></script><script src="./20260812-17-collapsible-chapter-editor.js"></script><script src="./20260812-18-machine-growth-simulator.js"></script><script src="./20260811-05-red-linework-reveal.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
