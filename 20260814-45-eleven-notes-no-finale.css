@@ -1,0 +1,124 @@
+/* 01, 02, 03, 06 — denser and larger Origin sequence. */
+#salt-origin .salt-media-list {
+  gap: clamp(48px, 6vw, 84px) !important;
+}
+
+#salt-origin .relations-map-reveal {
+  width: calc(100% - 28px) !important;
+  max-width: 1240px !important;
+  margin: clamp(44px, 5vw, 72px) auto 0 !important;
+}
+
+#salt-origin .relations-map-stage {
+  width: 100% !important;
+}
+
+#salt-origin .relations-map-reveal figcaption {
+  width: min(520px, 100%) !important;
+  margin: 10px 0 0 auto !important;
+  padding: 0 !important;
+  text-align: right !important;
+}
+
+#salt-origin .relations-map-reveal figcaption strong {
+  margin: 0 0 5px !important;
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+}
+
+#salt-origin .relations-map-reveal figcaption p {
+  margin: 0 !important;
+  font-size: 11px !important;
+  line-height: 1.45 !important;
+}
+
+/* 05 — larger animated lake image on the right, copy on the left. */
+#salt-origin .origin-change-pair {
+  grid-template-columns: minmax(230px, .55fr) minmax(0, 1.45fr) !important;
+  gap: clamp(28px, 4vw, 58px) !important;
+  width: calc(100% - 28px) !important;
+  max-width: 1240px !important;
+  margin: clamp(44px, 6vw, 80px) auto 0 !important;
+}
+
+#salt-origin .origin-change-pair > img {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  width: 100% !important;
+}
+
+#salt-origin .origin-change-copy {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  align-self: end !important;
+}
+
+/* 04 — original Archive relationship: copy left, layered image right. */
+#salt-archive .archive-unfold-inner {
+  display: grid !important;
+  grid-template-columns: minmax(220px, .42fr) minmax(0, 1.58fr) !important;
+  align-items: center !important;
+  gap: clamp(28px, 5vw, 72px) !important;
+}
+
+#salt-archive .archive-unfold-copy {
+  position: relative !important;
+  inset: auto !important;
+  grid-column: 1 !important;
+  text-align: left !important;
+  transform: none;
+}
+
+#salt-archive .archive-unfold-stage {
+  grid-column: 2 !important;
+}
+
+#salt-archive .archive-unfold-copy h3 {
+  font-size: 18px !important;
+  line-height: 1.15 !important;
+}
+
+#salt-archive .archive-unfold-copy p {
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+}
+
+/* 07 — Process title/body hierarchy. */
+#salt-process .salt-growth-video figcaption strong,
+#salt-process .salt-growth-video figcaption h4 {
+  font-size: 18px !important;
+  line-height: 1.2 !important;
+}
+
+#salt-process .salt-growth-video figcaption,
+#salt-process .salt-growth-video figcaption p,
+#salt-process .salt-growth-video figcaption::after {
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+}
+
+/* 08 — never overlay Machine captions on the image. */
+#salt-machine figure.salt-media.wide:nth-of-type(2) figcaption {
+  position: static !important;
+  inset: auto !important;
+  width: min(520px, 100%) !important;
+  margin: 10px 0 0 auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+  text-align: right !important;
+  transform: none !important;
+}
+
+@media (max-width: 760px) {
+  #salt-origin .origin-change-pair,
+  #salt-archive .archive-unfold-inner {
+    grid-template-columns: 1fr !important;
+  }
+  #salt-origin .origin-change-pair > img,
+  #salt-origin .origin-change-copy,
+  #salt-archive .archive-unfold-copy,
+  #salt-archive .archive-unfold-stage {
+    grid-column: 1 !important;
+  }
+  #salt-origin .origin-change-copy { grid-row: 2 !important; }
+}

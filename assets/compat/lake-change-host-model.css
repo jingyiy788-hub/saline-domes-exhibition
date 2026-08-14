@@ -1,0 +1,53 @@
+/* V28 — new lake-change film and crystallised host model. */
+.added-origin-film,
+.added-host-model {
+  width: min(1064px, calc(100% - 56px));
+  margin: clamp(52px, 8vw, 112px) auto 0;
+}
+
+.added-origin-film video,
+.added-host-model img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 82vh;
+  object-fit: contain;
+  background: #000;
+}
+
+.added-origin-film figcaption,
+.added-host-model figcaption {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: var(--type-caption);
+  line-height: 1.4;
+}
+
+.added-origin-film figcaption span,
+.added-host-model figcaption span {
+  color: #74726d;
+  font-size: var(--type-label);
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+
+.added-origin-film figcaption strong,
+.added-host-model figcaption strong {
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.added-host-model {
+  width: min(1120px, calc(100% - 56px));
+}
+
+@media (max-width: 760px) {
+  .added-origin-film,
+  .added-host-model {
+    width: calc(100% - 36px);
+  }
+}

@@ -1,0 +1,54 @@
+/* V29 — compact GIF left, editorial explanation right. */
+.origin-change-pair {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(250px, .75fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+  width: min(1064px, calc(100% - 56px));
+  margin: clamp(52px, 8vw, 112px) auto 0;
+}
+
+.origin-change-pair img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #000;
+}
+
+.origin-change-copy {
+  max-width: 390px;
+}
+
+.origin-change-copy small {
+  display: block;
+  margin-bottom: 16px;
+  color: #77756f;
+  font-size: var(--type-label);
+  font-weight: 600;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+
+.origin-change-copy h4 {
+  margin: 0 0 22px;
+  color: var(--ink);
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -.025em;
+}
+
+.origin-change-copy p {
+  margin: 0;
+  color: #aaa8a2;
+  font-size: clamp(14px, 1.35vw, 18px);
+  line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  .origin-change-pair {
+    grid-template-columns: 1fr;
+    width: calc(100% - 36px);
+  }
+  .origin-change-copy { max-width: none; }
+}

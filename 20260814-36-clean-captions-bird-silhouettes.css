@@ -1,0 +1,34 @@
+/* v36 — restore the full Breath frame and keep captions outside imagery. */
+#salt-breath.breath-finale { min-height: auto !important; overflow: visible !important; }
+#salt-breath > .pin-spacer, #salt-breath .breath-finale-inner { width: 100% !important; }
+.v35-slot-0801::before { content: none !important; display: none !important; }
+
+#salt-host figure.salt-media figcaption,
+#salt-host figure.added-host-model figcaption,
+#salt-host figure.editorial-crop figcaption {
+  position: static !important; inset: auto !important;
+  display: flex !important; justify-content: flex-end;
+  width: 100% !important; max-width: none !important;
+  margin: 0 !important; padding: 10px 0 0 !important;
+  border: 0 !important; background: #000 !important;
+  color: rgba(242,241,236,.78) !important; text-align: right;
+}
+#salt-host figure.salt-media figcaption strong,
+#salt-host figure.added-host-model figcaption strong {
+  color: rgba(242,241,236,.82) !important; font-size: 10px !important; font-weight: 400 !important;
+}
+
+.breath-bird-v35 { width: 24px; height: 12px; opacity: .36; }
+.breath-bird-v35::after {
+  content: ""; position: absolute; left: 10px; top: 5px;
+  width: 5px; height: 4px; border-radius: 50%; background: rgba(17,20,22,.88);
+}
+.breath-bird-v35 .wing {
+  top: 2px; width: 14px; height: 9px; border: 0 !important; background: rgba(17,20,22,.88);
+}
+.breath-bird-v35 .wing-left {
+  right: 48%; clip-path: polygon(100% 52%,8% 0,0 25%,72% 100%); border-radius: 0;
+}
+.breath-bird-v35 .wing-right {
+  left: 48%; clip-path: polygon(0 52%,92% 0,100% 25%,28% 100%); border-radius: 0;
+}

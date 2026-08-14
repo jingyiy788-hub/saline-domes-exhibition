@@ -1,0 +1,40 @@
+/* v42 — chapter cleanup and an unpinned Chapter 06 breathing coda. */
+#salt-machine .salt-media-list,
+#salt-machine .salt-media,
+#salt-machine figure,
+#salt-machine img,
+#salt-machine video {
+  border-color: transparent !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+#salt-machine .salt-media + .salt-media,
+#salt-machine figure + figure {
+  border-top: 0 !important;
+}
+
+#salt-host .breath-finale-inner {
+  position: relative !important;
+  inset: auto !important;
+  width: 100% !important;
+  height: min(76vw, calc(100vh - 114px)) !important;
+  min-height: 560px !important;
+  margin-top: clamp(72px, 10vw, 140px);
+  overflow: hidden;
+  background: #000;
+  transform: none !important;
+}
+
+#salt-host .breath-finale-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+#salt-host .breath-copy small::before { content: "CHAPTER .06 / "; }
+
+@media (max-width: 760px) {
+  #salt-host .breath-finale-inner { min-height: 520px !important; height: 72vh !important; }
+}

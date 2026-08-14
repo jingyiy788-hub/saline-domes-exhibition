@@ -1,0 +1,57 @@
+/* V24: one stable two-row header. Scroll no longer moves either row. */
+.site-header {
+  transform: none !important;
+  background: #000;
+  backdrop-filter: none;
+}
+
+.salt-story-nav {
+  top: 64px !important;
+  min-height: 66px;
+  max-height: 66px !important;
+  margin-top: 0 !important;
+  padding: 10px 28px !important;
+  border-top: 0 !important;
+  background: #000;
+  transform: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+body.chapter-nav-collapsed .site-header {
+  transform: none !important;
+}
+
+body.chapter-nav-collapsed .salt-story-nav {
+  top: 64px !important;
+  min-height: 66px;
+  max-height: 66px !important;
+  padding: 10px 28px !important;
+}
+
+body.chapter-nav-collapsed .salt-story-nav a {
+  display: inline-flex;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.chapter-nav-toggle {
+  position: static;
+  top: auto;
+}
+
+/* The chapter row and the primary header read as one 130px navigation block. */
+#project-detail,
+.salt-scene {
+  scroll-margin-top: 130px;
+}
+
+@media (max-width: 760px) {
+  .salt-story-nav,
+  body.chapter-nav-collapsed .salt-story-nav {
+    top: 64px !important;
+    min-height: 58px;
+    max-height: 58px !important;
+    padding: 8px 14px !important;
+  }
+}

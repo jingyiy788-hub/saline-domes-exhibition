@@ -1,0 +1,24 @@
+/* V25: image motion complements the existing text entrances. */
+.salt-media,
+.chapter-placeholder-card,
+.salt-growth-video,
+.machine-simulator {
+  transform-origin: 50% 50%;
+}
+
+.salt-media img,
+.salt-media video,
+.chapter-placeholder-card,
+.salt-growth-video video {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .salt-media img,
+  .salt-media video,
+  .chapter-placeholder-card,
+  .salt-growth-video video {
+    will-change: auto;
+  }
+}

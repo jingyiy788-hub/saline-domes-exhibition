@@ -1,0 +1,43 @@
+/* V33 — map belongs to Origin and crossfades directly from image 1 to image 2. */
+#salt-origin .relations-map-reveal {
+  width: min(1064px, calc(100% - 56px));
+  margin: clamp(64px, 9vw, 128px) auto 0;
+}
+
+#salt-origin .relations-map-stage {
+  aspect-ratio: 2048 / 1148;
+}
+
+#salt-origin .relations-map-overlay,
+#salt-origin .relations-map-scan {
+  display: none !important;
+}
+
+#salt-origin .relations-map-reveal figcaption {
+  justify-content: flex-end;
+}
+
+#salt-origin .relations-map-reveal figcaption > span {
+  display: none;
+}
+
+/* Machine film: more image, less copy. */
+#salt-machine .v30-motion-film {
+  grid-template-columns: minmax(0, 1.65fr) minmax(210px, .45fr);
+  width: min(1120px, calc(100% - 44px));
+  gap: clamp(22px, 3vw, 46px);
+}
+
+#salt-machine .v30-motion-copy {
+  max-width: 260px;
+}
+
+#salt-machine .v30-motion-film video {
+  width: 100%;
+}
+
+@media (max-width: 760px) {
+  #salt-origin .relations-map-reveal,
+  #salt-machine .v30-motion-film { width: calc(100% - 36px); }
+  #salt-machine .v30-motion-film { grid-template-columns: 1fr; }
+}

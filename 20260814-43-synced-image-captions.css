@@ -1,0 +1,22 @@
+/* Captions remain visually attached to their own media while GSAP moves both. */
+.salt-story figure[data-caption-synced] {
+  isolation: isolate;
+}
+
+.salt-story figure[data-caption-synced] > figcaption,
+.salt-story figure[data-caption-synced] > .media-caption,
+.salt-story figure[data-caption-synced] > [class*="caption"] {
+  transform-origin: right bottom;
+  will-change: transform, opacity, filter;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .salt-story figure[data-caption-synced],
+  .salt-story figure[data-caption-synced] > figcaption,
+  .salt-story figure[data-caption-synced] > .media-caption,
+  .salt-story figure[data-caption-synced] > [class*="caption"] {
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+}

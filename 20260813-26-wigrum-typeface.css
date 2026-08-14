@@ -1,0 +1,74 @@
+/* V26 — Bartlett Autumn Show typography.
+   Licensed Wigrum files can be added to assets/fonts/wigrum/ with these names. */
+@font-face {
+  font-family: "Wigrum";
+  src: local("Wigrum Regular"), local("Wigrum"),
+       url("./assets/fonts/wigrum/Wigrum-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Wigrum";
+  src: local("Wigrum Medium"),
+       url("./assets/fonts/wigrum/Wigrum-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+}
+
+:root {
+  --show-font: "Wigrum", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html,
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--show-font) !important;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+.brand,
+.main-nav,
+.salt-story-nav,
+.section-kicker,
+.salt-chapter,
+.archive-unfold-kicker,
+.salt-media figcaption,
+.machine-control label {
+  font-family: var(--show-font) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+.hero-copy h1,
+.overview-title h2,
+.salt-scene-head h3,
+.archive-unfold-copy h3 {
+  font-family: var(--show-font) !important;
+  font-weight: 500 !important;
+}
+
+p,
+li,
+dd,
+dt,
+figcaption,
+.salt-summary,
+.salt-question {
+  font-family: var(--show-font) !important;
+  font-weight: 400;
+}
+
+.brand,
+.section-kicker,
+.salt-chapter,
+.archive-unfold-kicker {
+  font-weight: 500;
+}

@@ -1,0 +1,105 @@
+/* V34 — visible asset IDs for every blank image slot. */
+.chapter-placeholder-image,
+.familiar-placeholder {
+  position: relative;
+}
+
+.blank-sheet-number {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  min-width: 48px;
+  height: 25px;
+  padding: 0 8px;
+  border: 1px solid #111;
+  background: rgba(255,255,255,.9);
+  color: #111;
+  font: 600 10px/1 "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  letter-spacing: .08em;
+}
+
+/* Origin: explanatory text overlaps the lower map edge, without creating a large blank gap. */
+#salt-origin .relations-map-reveal {
+  position: relative;
+  margin-bottom: clamp(52px, 7vw, 92px);
+}
+
+#salt-origin .relations-map-reveal figcaption {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  z-index: 5;
+  display: grid;
+  width: min(470px, calc(100% - 36px));
+  gap: 8px;
+  padding: 15px 17px;
+  background: rgba(0,0,0,.82);
+  text-align: left;
+}
+
+#salt-origin .relations-map-reveal figcaption strong {
+  font-size: 14px;
+}
+
+.origin-map-note {
+  margin: 0;
+  color: #aaa8a2;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+/* Standard editorial captions sit under images, never on top of them. */
+#salt-origin .salt-media:not(.relations-map-reveal) figcaption,
+#salt-inhabiting .salt-media figcaption {
+  position: static !important;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 10px 0 0 !important;
+  background: #000 !important;
+  text-align: right;
+}
+
+.breath-bird-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.breath-bird {
+  position: absolute;
+  left: -12%;
+  top: var(--bird-top);
+  width: var(--bird-size);
+  height: calc(var(--bird-size) * .45);
+  opacity: var(--bird-opacity);
+  transform: translate3d(0,0,0) scale(var(--bird-scale));
+}
+
+.breath-bird::before,
+.breath-bird::after {
+  content: "";
+  position: absolute;
+  top: 44%;
+  width: 55%;
+  height: 2px;
+  background: rgba(22,22,20,.8);
+  transform-origin: 100% 50%;
+}
+.breath-bird::before { left: 0; transform: rotate(18deg); }
+.breath-bird::after { right: 0; transform-origin: 0 50%; transform: rotate(-18deg); }
+
+@media (max-width: 760px) {
+  #salt-origin .relations-map-reveal figcaption {
+    position: static;
+    width: 100%;
+    background: #000;
+  }
+}

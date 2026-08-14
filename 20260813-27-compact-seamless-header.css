@@ -1,0 +1,91 @@
+/* V27: restore the original typeface and make the two-row header compact. */
+:root {
+  --font-primary: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+small,
+strong,
+span,
+figcaption,
+blockquote {
+  font-family: var(--font-primary) !important;
+}
+
+.site-header {
+  min-height: 64px;
+  height: 64px;
+  border-bottom: 1px solid var(--line) !important;
+}
+
+.salt-story-nav,
+body.chapter-nav-collapsed .salt-story-nav {
+  top: 64px !important;
+  box-sizing: border-box;
+  min-height: 50px !important;
+  max-height: 50px !important;
+  height: 50px;
+  margin: 0 !important;
+  padding: 7px 28px !important;
+  gap: 8px;
+  align-items: center;
+  border-top: 0 !important;
+  border-bottom: 1px solid var(--line) !important;
+  background: #000 !important;
+}
+
+.salt-story-nav a,
+body.chapter-nav-collapsed .salt-story-nav a {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  min-height: 32px;
+  padding: 0 12px !important;
+  line-height: 1 !important;
+  border-radius: 999px;
+}
+
+.chapter-nav-toggle {
+  position: static !important;
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  min-height: 32px;
+  margin: 0;
+  line-height: 1;
+}
+
+.chapter-nav-toggle::before {
+  display: block;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
+#project-detail,
+.salt-scene {
+  scroll-margin-top: 114px;
+}
+
+@media (max-width: 760px) {
+  .salt-story-nav,
+  body.chapter-nav-collapsed .salt-story-nav {
+    min-height: 48px !important;
+    max-height: 48px !important;
+    height: 48px;
+    padding: 7px 14px !important;
+  }
+}

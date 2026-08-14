@@ -1,0 +1,132 @@
+/* v41 — one coherent editorial type hierarchy. */
+:root {
+  --type-display: clamp(52px, 8vw, 118px);
+  --type-chapter: clamp(30px, 4.2vw, 56px);
+  --type-question: clamp(18px, 2vw, 26px);
+  --type-subhead: clamp(16px, 1.55vw, 21px);
+  --type-body: clamp(14px, 1.2vw, 17px);
+  --type-caption: 11px;
+  --type-label: 10px;
+  --leading-tight: .98;
+  --leading-title: 1.08;
+  --leading-body: 1.55;
+}
+
+html, body, button, input, select, textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+/* Level 01 — exhibition/project display title. */
+.hero-copy h1,
+.overview-title h2,
+#project-title {
+  font-size: var(--type-display) !important;
+  font-weight: 600 !important;
+  line-height: var(--leading-tight) !important;
+  letter-spacing: -.055em !important;
+}
+
+/* Level 02 — chapter title. */
+.salt-scene-head h3,
+.breath-copy h3 {
+  margin: 0 0 18px !important;
+  font-family: inherit !important;
+  font-size: var(--type-chapter) !important;
+  font-weight: 500 !important;
+  line-height: var(--leading-tight) !important;
+  letter-spacing: -.04em !important;
+}
+
+/* Level 03 — chapter question / proposition. */
+.salt-scene-head h4,
+.salt-scene-head .salt-scene-question,
+.origin-change-copy h4,
+.v30-motion-copy strong {
+  margin: 0 0 14px !important;
+  font-size: var(--type-question) !important;
+  font-weight: 400 !important;
+  line-height: var(--leading-title) !important;
+  letter-spacing: -.025em !important;
+}
+
+/* Level 04 — supporting subhead. */
+.abstract > p:last-child,
+.salt-closing blockquote {
+  font-size: var(--type-subhead) !important;
+  font-weight: 400 !important;
+  line-height: 1.42 !important;
+}
+
+/* Level 05 — body copy. */
+.salt-scene-head > div > p:last-child,
+.salt-scene-copy,
+.origin-change-copy p,
+.v30-motion-copy p,
+.breath-copy p,
+.salt-closing p,
+.about-view > p,
+.overview-meta dd {
+  font-size: var(--type-body) !important;
+  font-weight: 400 !important;
+  line-height: var(--leading-body) !important;
+  letter-spacing: 0 !important;
+}
+
+/* Level 06 — captions, always outside the image. */
+figure figcaption,
+.salt-media figcaption,
+.added-host-model figcaption,
+.relations-map-reveal figcaption {
+  font-size: var(--type-caption) !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0 !important;
+}
+
+figure figcaption strong,
+.salt-media figcaption strong,
+.added-host-model figcaption strong {
+  font-size: var(--type-caption) !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+}
+
+/* Level 07 — metadata, chapter numbers and kickers. */
+.section-kicker,
+.salt-scene-head > span,
+.salt-scene-head > small,
+.salt-scene-head .chapter-number,
+.origin-change-copy small,
+.v30-motion-copy small,
+.breath-copy small,
+.overview-meta dt,
+.blank-sheet-number {
+  font-size: var(--type-label) !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+}
+
+/* Navigation is interface text, not editorial content. */
+.site-header,
+.site-header a,
+.salt-story-nav a,
+.chapter-nav-toggle {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+}
+
+.site-header .brand { font-size: 12px !important; font-weight: 600 !important; line-height: 1.12 !important; }
+
+@media (max-width: 760px) {
+  :root {
+    --type-display: clamp(42px, 16vw, 72px);
+    --type-chapter: clamp(28px, 9vw, 42px);
+    --type-question: clamp(17px, 5.5vw, 22px);
+    --type-body: 14px;
+  }
+  .site-header a, .salt-story-nav a, .chapter-nav-toggle { font-size: 12px !important; }
+}

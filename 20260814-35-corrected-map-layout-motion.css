@@ -1,0 +1,82 @@
+/* v35 — corrected editorial placement and organic motion */
+#salt-origin .relations-map-reveal figcaption {
+  position: static !important;
+  width: min(55rem, 100%);
+  margin: 0 0 0 auto;
+  padding: 14px 0 0;
+  background: transparent !important;
+  text-align: left;
+}
+
+#salt-origin .relations-map-reveal figcaption strong {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.v35-slot-0801 {
+  position: relative;
+  width: calc(100% - 56px) !important;
+  max-width: none !important;
+  margin: 80px 28px 110px !important;
+}
+
+.v35-slot-0801::before {
+  content: "08.01";
+  position: absolute;
+  z-index: 3;
+  top: 18px;
+  left: 18px;
+  padding: 6px 10px;
+  border: 1px solid rgba(255,255,255,.5);
+  color: #fff;
+  background: #000;
+  font-size: 11px;
+  letter-spacing: .08em;
+}
+
+.breath-bird-layer-v35 {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.breath-bird-v35 {
+  position: absolute;
+  left: -9vw;
+  top: var(--bird-y);
+  width: 34px;
+  height: 18px;
+  opacity: .75;
+  transform-origin: center;
+}
+
+.breath-bird-v35 .wing {
+  position: absolute;
+  top: 8px;
+  width: 19px;
+  height: 9px;
+  border-top: 2px solid rgba(24, 27, 30, .85);
+}
+
+.breath-bird-v35 .wing-left {
+  right: 50%;
+  border-radius: 90% 0 0 0;
+  transform-origin: right center;
+}
+
+.breath-bird-v35 .wing-right {
+  left: 50%;
+  border-radius: 0 90% 0 0;
+  transform-origin: left center;
+}
+
+@media (max-width: 760px) {
+  #salt-origin .relations-map-reveal figcaption { width: 100%; }
+  .v35-slot-0801 { width: calc(100% - 28px) !important; margin-inline: 14px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .breath-bird-layer-v35 { display: none; }
+}
