@@ -1,0 +1,20 @@
+/* 2.10 review updates: remove the empty 03.01 sheet and enlarge the material-cycle plate. */
+#salt-process .process-cycle-page {
+  width: calc(100% - clamp(32px, 5vw, 96px)) !important;
+  max-width: 1800px !important;
+  grid-template-columns: minmax(220px, 0.22fr) minmax(0, 0.78fr) !important;
+  gap: clamp(24px, 3vw, 56px) !important;
+}
+
+#salt-process .process-cycle-page > img {
+  width: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+@media (max-width: 760px) {
+  #salt-process .process-cycle-page {
+    width: calc(100% - 32px) !important;
+    grid-template-columns: 1fr !important;
+  }
+}

@@ -1,0 +1,73 @@
+.v55-filled-placeholder .familiar-white-image,
+.v55-filled-placeholder .chapter-placeholder-image { background: #000 !important; overflow: hidden; }
+.v55-filled-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+#salt-familiar .familiar-placeholder:first-child .v55-filled-image img { object-position: 50% 52%; }
+#salt-familiar .familiar-placeholder:nth-child(2) .v55-filled-image img { object-position: 66% 70%; }
+.v55-filled-placeholder figcaption { position: static !important; padding-top: 14px !important; color: #f2f1ec; background: transparent !important; }
+.v55-filled-placeholder figcaption strong,
+.v55-filled-placeholder figcaption p { display: block; }
+.v55-filled-placeholder figcaption strong { font-size: 14px; font-weight: 500; }
+.v55-filled-placeholder figcaption p { max-width: 42rem; margin: 8px 0 0; color: #aaa9a4; font-size: 11px; line-height: 1.45; }
+
+.v55-editorial-page { box-sizing: border-box; width: min(1180px, calc(100% - 56px)); margin: clamp(72px, 9vw, 140px) auto; }
+.origin-ecosystem-board > img { display: block; width: 100%; max-height: 78vh; object-fit: contain; background: #000; }
+.origin-ecosystem-board figcaption,
+.process-phase-page figcaption { width: min(460px, 100%); margin-left: auto; padding-top: 18px; }
+.v55-editorial-page small,
+.v55-editorial-page strong,
+.v55-editorial-page p { display: block; }
+.v55-editorial-page small { color: #8f918d; font-size: 11px; letter-spacing: .06em; }
+.v55-editorial-page strong { margin-top: 10px; color: #f2f1ec; font-size: 18px; line-height: 1.15; font-weight: 500; }
+.v55-editorial-page p { color: #aaa9a4; font-size: 14px; line-height: 1.5; }
+
+.origin-trophic-page { border-top: 1px solid #333; padding-top: 26px; }
+.origin-trophic-page > header { display: grid; grid-template-columns: minmax(180px,.55fr) minmax(0,1.45fr); gap: 20px 48px; }
+.origin-trophic-page h4 { grid-column: 2; margin: 0; color: #f2f1ec; font-size: clamp(26px,3vw,46px); line-height: .98; font-weight: 500; max-width: 850px; }
+.origin-trophic-page header > p { grid-column: 2; max-width: 760px; margin: 0; }
+.origin-trophic-layout { display: grid; grid-template-columns: minmax(0,1.6fr) minmax(250px,.7fr); gap: clamp(30px,5vw,80px); align-items: stretch; margin-top: 48px; }
+.origin-trophic-matrix { width: 100%; height: 100%; min-height: 520px; object-fit: cover; object-position: center; }
+.origin-trophic-levels { display: grid; align-content: stretch; }
+.origin-trophic-levels article { position: relative; padding: 24px 0 28px 42px; border-top: 1px solid #555; }
+.origin-trophic-levels article:last-child { border-bottom: 1px solid #555; }
+.origin-trophic-levels span { position: absolute; left: 0; top: 27px; color: #8f918d; font-size: 11px; }
+.origin-trophic-levels h5 { margin: 0 0 12px; color: #f2f1ec; font-size: 18px; font-weight: 500; }
+.origin-trophic-levels p { margin: 0; font-size: 12px; }
+
+.process-phase-page { display: grid; grid-template-columns: minmax(0,1.55fr) minmax(230px,.6fr); gap: clamp(28px,5vw,76px); align-items: end; }
+.process-phase-visuals { display: grid; grid-template-columns: minmax(0,1fr) minmax(150px,.28fr); gap: 24px; align-items: stretch; }
+.process-phase-visuals img { display: block; width: 100%; height: min(64vh,650px); object-fit: contain; background: #000; }
+.process-phase-page figcaption { margin: 0; padding: 0 0 10px; }
+
+.relations-map-stage { position: relative; overflow: hidden; isolation: isolate; }
+.v55-scan-beam { position: absolute; z-index: 8; top: -3%; bottom: -3%; left: -15%; width: 9%; opacity: 0; pointer-events: none; mix-blend-mode: screen; background: linear-gradient(90deg, transparent, rgba(235,255,251,.12) 18%, rgba(255,255,255,.98) 49%, rgba(194,241,235,.25) 66%, transparent); filter: blur(.2px) drop-shadow(0 0 12px rgba(210,255,249,.9)) drop-shadow(0 0 34px rgba(143,230,219,.7)); transform: skewX(-7deg); }
+.v55-scan-beam::before,
+.v55-scan-beam::after { content: ""; position: absolute; top: 0; bottom: 0; width: 1px; background: rgba(255,255,255,.9); box-shadow: 0 0 12px #fff; }
+.v55-scan-beam::before { left: 32%; }
+.v55-scan-beam::after { right: 28%; opacity: .52; }
+.v55-scan-beam.is-scanning { animation: v55-map-scan 1.4s cubic-bezier(.45,0,.25,1) 2; }
+@keyframes v55-map-scan { 0% { left: -15%; opacity: 0; } 8% { opacity: 1; } 88% { opacity: 1; } 100% { left: 108%; opacity: 0; } }
+
+.host-exploded-figure { position: relative; overflow: visible !important; }
+.host-exploded-figure > img { opacity: .12 !important; }
+.host-exploded-stage { position: absolute; z-index: 2; inset: 0; pointer-events: none; perspective: 1200px; }
+.host-exploded-slice { position: absolute; inset: 0; background-size: 100% 100%; background-position: center; background-repeat: no-repeat; opacity: 0; transition: transform 1.05s cubic-bezier(.2,.8,.2,1), opacity .45s ease, filter .8s ease; will-change: transform; }
+.host-exploded-left { clip-path: inset(0 63% 0 0); transform: translateX(0) rotateY(0); }
+.host-exploded-centre { clip-path: inset(0 28% 0 35%); transform: translateX(0) scale(.98); }
+.host-exploded-right { clip-path: inset(0 0 0 66%); transform: translateX(0) rotateY(0); }
+.host-exploded-figure.is-exploded .host-exploded-slice { opacity: 1; filter: drop-shadow(0 0 12px rgba(255,255,255,.08)); }
+.host-exploded-figure.is-exploded .host-exploded-left { transform: translateX(-5%) rotateY(-4deg); }
+.host-exploded-figure.is-exploded .host-exploded-centre { transform: translateY(-5%) scale(1.02); }
+.host-exploded-figure.is-exploded .host-exploded-right { transform: translateX(6%) rotateY(4deg); }
+
+@media (max-width: 760px) {
+  .v55-editorial-page { width: calc(100% - 32px); }
+  .origin-trophic-page > header,
+  .origin-trophic-layout,
+  .process-phase-page { grid-template-columns: 1fr; }
+  .origin-trophic-page h4,
+  .origin-trophic-page header > p { grid-column: 1; }
+  .origin-trophic-matrix { min-height: 360px; }
+  .process-phase-visuals { grid-template-columns: 1fr; }
+  .process-phase-visuals img { height: auto; max-height: 62vh; }
+}
+@media (prefers-reduced-motion: reduce) { .v55-scan-beam { display: none; } .host-exploded-slice { transition: none; } }

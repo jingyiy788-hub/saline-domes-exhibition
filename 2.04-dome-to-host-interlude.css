@@ -1,0 +1,84 @@
+.dome-host-interlude {
+  position: relative;
+  width: 100%;
+  padding: clamp(70px, 10vw, 150px) 28px clamp(84px, 12vw, 180px);
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #f2f1ec;
+  background: #000;
+  border-top: 1px solid rgba(242, 241, 236, .16);
+  border-bottom: 1px solid rgba(242, 241, 236, .16);
+}
+
+.dome-host-interlude-head {
+  display: grid;
+  grid-template-columns: minmax(90px, .35fr) minmax(280px, 1fr) minmax(260px, .8fr);
+  gap: clamp(20px, 4vw, 70px);
+  align-items: end;
+  max-width: 1500px;
+  margin: 0 auto clamp(64px, 9vw, 130px);
+}
+
+.dome-host-interlude-head span {
+  color: #8e918e;
+  font-size: 11px;
+  letter-spacing: .08em;
+}
+
+.dome-host-interlude-head h3 {
+  margin: 0;
+  font-size: clamp(30px, 4vw, 62px);
+  font-weight: 400;
+  line-height: .95;
+  letter-spacing: -.035em;
+}
+
+.dome-host-interlude-head p {
+  max-width: 470px;
+  margin: 0;
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.dome-host-interlude-pages {
+  display: grid;
+  gap: clamp(90px, 14vw, 220px);
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.dome-host-interlude .interlude-page {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.dome-host-interlude .interlude-page img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 86vh;
+  object-fit: contain;
+  object-position: center;
+}
+
+.dome-host-interlude .interlude-page figcaption {
+  width: min(520px, 46%);
+  margin: 18px 0 0 auto;
+}
+
+.dome-host-interlude .interlude-page figcaption small,
+.dome-host-interlude .interlude-page figcaption strong,
+.dome-host-interlude .interlude-page figcaption p { display: block; }
+.dome-host-interlude .interlude-page figcaption small { color: #8e918e; font-size: 11px; letter-spacing: .06em; }
+.dome-host-interlude .interlude-page figcaption strong { margin-top: 8px; font-size: 18px; font-weight: 500; }
+.dome-host-interlude .interlude-page figcaption p { margin: 8px 0 0; color: #aaa; font-size: 14px; line-height: 1.5; }
+
+/* Chapter 06 keeps its system-assembly spread as the formal first image. */
+#salt-host .chapter06-opening-page { order: -999; }
+
+@media (max-width: 760px) {
+  .dome-host-interlude { padding-left: 16px; padding-right: 16px; }
+  .dome-host-interlude-head { grid-template-columns: 1fr; gap: 14px; }
+  .dome-host-interlude .interlude-page figcaption { width: 100%; }
+}

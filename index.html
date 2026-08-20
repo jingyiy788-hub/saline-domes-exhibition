@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>The Saline Domes | Birds Fog and Host Move</title>
+    <title>The Saline Domes | Version 2.10</title>
     <meta name="description" content="A nine-part narrative tracing salt from familiar material to territorial metabolism." />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./20260806-27-ecology-ten-block-layout.css" />
@@ -36,7 +36,8 @@
     <link rel="stylesheet" href="./20260814-42-host-finale-cleanup.css" />
     <link rel="stylesheet" href="./20260814-43-synced-image-captions.css" />
     <link rel="stylesheet" href="./20260814-45-eleven-notes-no-finale.css" />
-    <link rel="stylesheet" href="./20260814-52-birds-fog-host-move.css" />
+    <link rel="stylesheet" href="./20260814-54-tight-nav-breath-order.css" />
+    <link rel="stylesheet" href="./20260819-55-scan-explode-trophic.css" />
   </head>
   <body>
     <header class="site-header"><a class="brand" href="#home" aria-label="Online Exhibition home"><span>Online Exhibition</span><span>2026</span></a><nav class="main-nav" aria-label="Primary navigation"><a href="#project/the-saline-domes">Project</a><a href="#students">Students</a><a href="#about">About</a></nav></header>
@@ -81,7 +82,128 @@
     <script src="./20260811-05-red-linework-reveal.js"></script>
     <script src="./20260814-43-synced-image-captions.js"></script>
     <script src="./20260814-47-eleven-layout-notes-only.js"></script>
-    <script src="./20260814-52-birds-fog-host-move.js"></script>
+    <script src="./20260814-54-tight-nav-breath-order.js"></script>
+    <script src="./20260819-55-scan-explode-trophic.js"></script>
+    <link rel="stylesheet" href="./2.01-saline-domes.css">
+    <script src="./2.01-saline-domes.js"></script>
+    <link rel="stylesheet" href="./2.02-environmental-agents.css">
+    <script src="./2.02-environmental-agents.js"></script>
+    <link rel="stylesheet" href="./2.03-environmental-agents-replica.css">
+    <link rel="stylesheet" href="./2.04-material-sequence.css">
+    <link rel="stylesheet" href="./2.04-dome-to-host-interlude.css">
+    <link rel="stylesheet" href="./2.06-layout-corrections.css">
+    <script src="./2.03-environmental-agents-replica.js"></script>
+    <script src="./2.04-material-sequence.js"></script>
+    <script src="./2.04-dome-to-host-interlude.js"></script>
+    <script src="./2.06-layout-corrections.js"></script>
+    <style>
+      /* 2.07 — reveal only the four images marked in the review notes */
+      .v207-image-reveal {
+        opacity: 0;
+        transform: translateY(24px) scale(0.985);
+        filter: blur(7px) brightness(0.82);
+        clip-path: inset(0 0 9% 0);
+        will-change: opacity, transform, filter, clip-path;
+        transition:
+          opacity 520ms cubic-bezier(.2,.7,.2,1),
+          transform 680ms cubic-bezier(.2,.7,.2,1),
+          filter 680ms cubic-bezier(.2,.7,.2,1),
+          clip-path 680ms cubic-bezier(.2,.7,.2,1);
+      }
+
+      .v207-image-reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0) brightness(1);
+        clip-path: inset(0);
+      }
+
+      .v207-image-reveal.v207-delay-1 {
+        transition-delay: 90ms;
+      }
+
+      .v207-image-reveal.v207-delay-2 {
+        transition-delay: 130ms;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .v207-image-reveal {
+          opacity: 1;
+          transform: none;
+          filter: none;
+          clip-path: inset(0);
+          transition: none;
+        }
+      }
+    </style>
+    <script>
+      (() => {
+        const revealSelectors = [
+      "div.familiar-image-plan > figure.familiar-placeholder.v55-filled-placeholder:nth-of-type(1)",
+      "div.familiar-image-plan > figure.familiar-placeholder.v55-filled-placeholder:nth-of-type(2)",
+          "section#salt-origin > section.origin-trophic-page.v55-editorial-page > div.origin-trophic-layout > img.origin-trophic-matrix",
+          "section#salt-origin > figure.origin-ecosystem-board.v55-editorial-page > img"
+        ];
+
+        const observeImages = (images) => {
+          if (!("IntersectionObserver" in window)) {
+            images.forEach((image) => image.classList.add("is-visible"));
+            return;
+          }
+
+          const observer = new IntersectionObserver((entries, activeObserver) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("is-visible");
+              activeObserver.unobserve(entry.target);
+            });
+          }, {
+            threshold: 0.18,
+            rootMargin: "0px 0px -8% 0px"
+          });
+
+          images.forEach((image) => observer.observe(image));
+        };
+
+        const applyReveal = (allowPartial = false) => {
+          const images = revealSelectors
+            .map((selector) => document.querySelector(selector))
+            .filter(Boolean);
+
+          if (!allowPartial && images.length < revealSelectors.length) return false;
+
+          images.forEach((image, index) => {
+            image.classList.add("v207-image-reveal");
+            if (index === 1) image.classList.add("v207-delay-1");
+            if (index > 1) image.classList.add("v207-delay-2");
+          });
+
+          requestAnimationFrame(() => observeImages(images));
+          return images.length > 0;
+        };
+
+        const startReveal = () => {
+          const startedAt = performance.now();
+          const tick = () => {
+            if (applyReveal()) return;
+            if (performance.now() - startedAt < 2500) {
+              requestAnimationFrame(tick);
+              return;
+            }
+            applyReveal(true);
+          };
+          tick();
+        };
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", startReveal);
+        } else {
+          startReveal();
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="./2.10-media-updates.css" />
+    <script src="./2.10-media-updates.js"></script>
   </body>
 </html>
 

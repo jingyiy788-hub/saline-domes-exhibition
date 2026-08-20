@@ -1,0 +1,79 @@
+/* 2.06 — focused layout corrections; 2.05 remains untouched. */
+
+/* Origin relational map: remove the scan / light-beam layer from 2.05. */
+#salt-origin .relations-map-stage .v55-scan-beam {
+  display: none !important;
+  opacity: 0 !important;
+  animation: none !important;
+}
+
+/* Comparative time matrix: smaller image, anchored to the left. */
+#salt-process .v204-experiment-matrix {
+  display: grid;
+  grid-template-columns: minmax(0, 0.58fr) minmax(240px, 0.42fr);
+  align-items: end;
+  gap: clamp(28px, 5vw, 80px);
+}
+
+#salt-process .v204-experiment-matrix .v204-image-frame {
+  width: 100%;
+  max-width: 720px;
+  justify-self: start;
+}
+
+#salt-process .v204-experiment-matrix figcaption {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 0 0 auto;
+}
+
+/* Reversible cycle: explanatory copy left, image right. */
+#salt-process .process-cycle-page {
+  display: grid !important;
+  grid-template-columns: minmax(240px, 0.4fr) minmax(0, 0.6fr);
+  grid-template-areas: "caption image";
+  align-items: center;
+  gap: clamp(28px, 5vw, 80px);
+}
+
+#salt-process .process-cycle-page > img {
+  grid-area: image;
+  width: 100% !important;
+  max-height: 78vh;
+  object-fit: contain;
+}
+
+#salt-process .process-cycle-page.v206-cycle-replacement {
+  grid-template-columns: minmax(220px, 0.32fr) minmax(0, 0.68fr);
+}
+
+#salt-process .process-cycle-page.v206-cycle-replacement > img {
+  max-height: none;
+  width: 100% !important;
+  object-fit: contain;
+  object-position: center;
+}
+
+#salt-process .process-cycle-page > figcaption {
+  grid-area: caption;
+  width: 100%;
+  max-width: 460px;
+  margin: 0 !important;
+}
+
+@media (max-width: 760px) {
+  #salt-process .v204-experiment-matrix {
+    grid-template-columns: 1fr;
+  }
+
+  #salt-process .v204-experiment-matrix figcaption {
+    margin: 0;
+  }
+
+  #salt-process .process-cycle-page {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "caption";
+  }
+}

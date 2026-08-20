@@ -1,0 +1,306 @@
+/* Defensive fallback: an obsolete finale can never cover subsequent media. */
+.breath-finale-inner,
+.pin-spacer-breathing-finale,
+.pin-spacer-breathing-finale-bounded {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+#salt-inhabiting,
+#salt-breath,
+#salt-inhabiting .salt-media-list,
+#salt-breath .salt-media-list,
+#salt-inhabiting figure,
+#salt-breath figure {
+  position: relative;
+  z-index: 1;
+  visibility: visible !important;
+}
+
+/* Later chapters must remain visible after removing the obsolete finale. */
+#salt-inhabiting figure,
+#salt-inhabiting figure > img,
+#salt-inhabiting figure > video,
+#salt-inhabiting figure > figcaption,
+#salt-breath figure,
+#salt-breath figure > img,
+#salt-breath figure > video,
+#salt-breath figure > figcaption {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+.machine-growth-gif {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.7fr) minmax(220px, .7fr);
+  align-items: end;
+  gap: clamp(28px, 5vw, 78px);
+  width: min(1180px, calc(100% - 56px));
+  margin: clamp(92px, 12vw, 180px) auto;
+}
+
+.machine-growth-gif > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #000;
+}
+
+.machine-growth-gif > figcaption {
+  position: static !important;
+  padding: 0 0 6px;
+  color: #f2f1ec;
+  background: transparent !important;
+}
+
+.machine-growth-gif small {
+  display: block;
+  margin-bottom: 18px;
+  color: #8f918d;
+  font-size: 11px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.machine-growth-gif strong {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 18px;
+  line-height: 1.12;
+  font-weight: 500;
+}
+
+.machine-growth-gif p {
+  margin: 0;
+  color: #aaa9a4;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  .machine-growth-gif {
+    grid-template-columns: 1fr;
+    width: calc(100% - 32px);
+  }
+}
+
+.inhabiting-bird-scene {
+  position: relative !important;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.inhabiting-bird-scene > img {
+  position: relative;
+  z-index: 0;
+}
+
+.inhabiting-fog {
+  position: absolute;
+  z-index: 1;
+  inset: -12% -18%;
+  pointer-events: none;
+  opacity: .2;
+  filter: blur(30px);
+  background:
+    radial-gradient(ellipse at 30% 38%, rgba(235,239,237,.55), transparent 44%),
+    radial-gradient(ellipse at 72% 54%, rgba(226,232,230,.44), transparent 48%);
+  mix-blend-mode: screen;
+}
+
+.inhabiting-birds {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.inhabiting-bird {
+  position: absolute;
+  left: -8%;
+  top: var(--bird-top);
+  width: 26px;
+  height: 13px;
+  opacity: .6;
+}
+
+.inhabiting-bird .wing {
+  position: absolute;
+  top: 2px;
+  width: 15px;
+  height: 9px;
+  background: rgba(22,25,27,.86);
+}
+
+.inhabiting-bird .wing-left {
+  right: 48%;
+  transform-origin: right center;
+  clip-path: polygon(100% 52%,8% 0,0 25%,72% 100%);
+}
+
+.inhabiting-bird .wing-right {
+  left: 48%;
+  transform-origin: left center;
+  clip-path: polygon(0 52%,92% 0,100% 25%,28% 100%);
+}
+
+/* Captions in Breath remain outside the artwork. */
+#salt-breath .salt-media-list > figure.salt-media.wide:first-of-type > figcaption {
+  position: static !important;
+  inset: auto !important;
+  width: 100%;
+  padding: 12px 0 0;
+  color: #f2f1ec;
+  background: transparent !important;
+  text-align: right;
+}
+
+#salt-host .v35-slot-0801 {
+  margin-top: clamp(80px, 10vw, 150px) !important;
+}
+
+/* 53: compact header, with the labels visually resting near its baseline. */
+.site-header {
+  box-sizing: border-box !important;
+  height: 60px !important;
+  min-height: 60px !important;
+  padding: 0 28px 7px !important;
+  align-items: flex-end !important;
+}
+
+/* Remove the oversized editorial pause between the two Origin maps. */
+#salt-origin .salt-media-list {
+  gap: clamp(30px, 4vw, 54px) !important;
+}
+
+#salt-origin .salt-media-list > figure,
+#salt-origin .relations-map-reveal {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+#salt-origin .relations-map-stage {
+  min-height: 0 !important;
+}
+
+/* Match the change-over-time block to the 28px drawing margin below it. */
+#salt-origin .origin-change-pair {
+  box-sizing: border-box;
+  width: calc(100% - 56px) !important;
+  margin-left: 28px !important;
+  margin-right: 28px !important;
+}
+
+#salt-origin .origin-change-copy {
+  padding-left: 0 !important;
+}
+
+/* The wipe uses a stable underlying image and reveals the final map from left to right. */
+#salt-origin .relations-map-final:nth-of-type(2) {
+  will-change: clip-path;
+}
+
+/* Territorial model now belongs to Chapter 08; its copy must never inherit blur. */
+#salt-host .v35-slot-0801 {
+  margin-top: initial !important;
+}
+
+#salt-breath .v35-slot-0801,
+#salt-breath .v35-slot-0801 figcaption,
+#salt-breath .v35-slot-0801 figcaption * {
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+#salt-breath .v35-slot-0801 {
+  width: min(1180px, calc(100% - 56px)) !important;
+  margin: clamp(76px, 9vw, 130px) auto !important;
+}
+
+.breath-transformation-film {
+  display: grid !important;
+  grid-template-columns: 1fr;
+  width: min(1180px, calc(100% - 56px));
+  margin: clamp(90px, 12vw, 170px) auto clamp(100px, 14vw, 200px);
+}
+
+.breath-transformation-film > video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 76vh;
+  object-fit: contain;
+  background: #000;
+}
+
+.breath-transformation-film > figcaption {
+  position: static !important;
+  width: min(460px, 100%);
+  justify-self: end;
+  padding: 18px 0 0 !important;
+  color: #f2f1ec;
+  background: transparent !important;
+}
+
+.breath-transformation-film small,
+.breath-transformation-film strong,
+.breath-transformation-film p {
+  display: block;
+}
+
+.breath-transformation-film small {
+  margin-bottom: 12px;
+  color: #8f918d;
+  font-size: 11px;
+  letter-spacing: .06em;
+}
+
+.breath-transformation-film strong {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.15;
+  font-weight: 500;
+}
+
+.breath-transformation-film p {
+  margin: 0;
+  color: #aaa9a4;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    padding-inline: 16px !important;
+  }
+
+  #salt-origin .origin-change-pair,
+  #salt-breath .v35-slot-0801,
+  .breath-transformation-film {
+    width: calc(100% - 32px) !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inhabiting-birds { display: none; }
+  .inhabiting-fog { opacity: .1; }
+}
+
+/* 54: the chapter navigation forms one continuous 60px header system. */
+#salt-story > .salt-story-nav,
+.salt-story-nav {
+  top: 60px !important;
+  margin-top: 0 !important;
+}
+
+/* The transformation-cycle insert was removed from Chapter 08. */
+.breath-transformation-film {
+  display: none !important;
+}

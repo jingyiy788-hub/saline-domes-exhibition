@@ -1,0 +1,40 @@
+.v204-editorial-page {
+  width: calc(100% - 56px);
+  margin: clamp(64px, 9vw, 132px) 28px;
+  color: #f2f1ec;
+}
+
+.v204-image-frame {
+  width: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+.v204-image-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 88vh;
+  object-fit: contain;
+  object-position: center;
+}
+
+.v204-editorial-page figcaption {
+  width: min(540px, 48%);
+  margin: 16px 0 0 auto;
+}
+
+.v204-editorial-page figcaption small,
+.v204-editorial-page figcaption strong,
+.v204-editorial-page figcaption p { display: block; }
+.v204-editorial-page figcaption small { color: #8e918e; font-size: 11px; letter-spacing: .06em; }
+.v204-editorial-page figcaption strong { margin-top: 8px; font-size: 18px; font-weight: 500; line-height: 1.15; }
+.v204-editorial-page figcaption p { margin: 8px 0 0; color: #aaa; font-size: 14px; line-height: 1.5; }
+
+.v204-experiment-method .v204-image-frame img,
+.v204-experiment-matrix .v204-image-frame img { max-height: none; }
+
+@media (max-width: 760px) {
+  .v204-editorial-page { width: calc(100% - 32px); margin-left: 16px; margin-right: 16px; }
+  .v204-editorial-page figcaption { width: 100%; }
+}
